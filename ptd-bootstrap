@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ -n "$1" ]; then
+
+
+  	echo "Cloning Puddletown bootstrap"
+  	git clone -b master https://github.com/PuddletownDesign/puddletown-bootstrap $1/
+
+  	echo "Moving into $1 directory"
+  	cd $1
+
+  	echo "Removing old git data"
+  	rm -rf .git
+
+	echo "Initializing a new Repo"
+	git init
+
+	echo "Adding all files"
+	git add .
+
+	echo "Commiting the initial import"
+	git commit -m "Initial import of $1"
+
+	#echo "Checking out development branch"
+	#git checkout -b dev
+	cd src/
+	echo "Installing dependencies"
+	npm install
+	bower install
+
+
+	echo "opening http://localhost:8080/ in browser"
+	open -a /Applications/Google\ Chrome\ Canary.app http://localhost:8080/build/
+
+	echo "Running Gulp"
+	gulp
+
+	echo "[Process Complete Sucka]"
+
+	exit
+
+else
+    echo "please enter the project name after the command"
+	echo "ex. \$ bootstrap new-project.com"
+fi
