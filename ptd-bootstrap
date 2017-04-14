@@ -41,5 +41,5 @@ if [ -n "$1" ]; then
 
 else
     echo "please enter the project name after the command"
-	echo "ex. \$ bootstrap new-project.com"
+	echo "ex. \$ ptd-bootstrap new-project.com"
 fi
