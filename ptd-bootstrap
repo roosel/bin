@@ -25,7 +25,7 @@ if [ -n "$1" ]; then
 	#git checkout -b dev
 	cd src/
 	echo "Installing dependencies"
-	npm install
+	yarn install
 	bower install
 
 
