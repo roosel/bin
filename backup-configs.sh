@@ -31,3 +31,8 @@ cd ~/Documents/Dev/ZSH
 git add .
 git commit -m "updated zsh preferences"
 git push origin mac
+
+cd ~/Documents/Dev/LaunchAgents
+git add com.puddletowndesign.backup.plist com.puddletowndesign.update.plist README.md
+git commit -m "updated jobs"
+git push origin master
