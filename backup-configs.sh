@@ -20,12 +20,6 @@ git add .
 git commit -m "updated git preferences"
 git push origin mac
 
-echo "backing up installer"
-cd ~/Documents/Dev/Installer
-git add .
-git commit -m "updated installer preferences"
-git push origin mac
-
 echo "backing up iterm"
 cd ~/Documents/Dev/iTerm
 git add .
